@@ -58,14 +58,15 @@ section {
                 top: 50%;
                 left: 210px;
                 transform: translateY(-50%);
-                width: 50%; /*70*/ 
-                
+                width: 50%;
+                /*70*/
+
                 & img {
                     width: 100%;
                     transform: rotate(-30deg);
                 }
             }
-        
+
             & .content {
                 position: absolute;
                 right: 100px;
@@ -108,92 +109,95 @@ section {
                     font-family: "League Gothic", sans-serif;
 
                 }
-                
-        } 
 
-    
-    } &::before {
-        content: '';
-        position: absolute;
-        height: 200px;
-        width: 70%;
-        top: 52%;
-        border-top: 1px solid #fff;
-    }
-
-    
-
-    .arrows{
-        width: 70vw;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -25%);
-        display: flex;
-        justify-content: space-between;
-
-        & button:nth-child(1) {
-            & img {
-                transform: scale(-1);
-            }
-        }
-
-        & button {
-            top: 60%;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-
-            & img {
-                width: 30px;
-                margin-top: 4px;
-                cursor: pointer;
             }
 
-            &:hover {
-                background-color: #beff1b;
-            }
-        }
-    }
-
-    .indicators {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 200px;
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        gap: 15px;
-
-        & .number {
-            font-size: 3.5em;
-            font-family: "League Gothic", sans-serif;
 
         }
 
-        & ul {
+        &::before {
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 70%;
+            top: 52%;
+            border-top: 1px solid #fff;
+        }
+
+
+
+        .arrows {
+            width: 70vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -25%);
             display: flex;
-            gap: 10px;
+            justify-content: space-between;
 
-            & li {
-                width: 50px;
-                height: 5px;
-                background-color: #beff1b;
-                border-radius: 5px;
-                transition: 0.5s;
+            & button:nth-child(1) {
+                & img {
+                    transform: scale(-1);
+                }
             }
 
-            & .active {
-                background-color: #fff;
+            & button {
+                top: 60%;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+
+                & img {
+                    width: 30px;
+                    margin-top: 4px;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    background-color: #beff1b;
+                }
             }
         }
-    } 
-};
+
+        .indicators {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 200px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 15px;
+
+            & .number {
+                font-size: 3.5em;
+                font-family: "League Gothic", sans-serif;
+
+            }
+
+            & ul {
+                display: flex;
+                gap: 10px;
+
+                & li {
+                    width: 50px;
+                    height: 5px;
+                    background-color: #beff1b;
+                    border-radius: 5px;
+                    transition: 0.5s;
+                }
+
+                & .active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
 
 section {
     & .list {
@@ -211,16 +215,20 @@ section {
                     transition-delay: 0.3s;
                 }
             }
-            
+
             & .content {
 
-                & .car-information, h2, .description, .information {
+                & .car-information,
+                h2,
+                .description,
+                .information {
                     transform: translateX(200px);
                     transition: 0.7s;
                     transition-delay: 0.3s;
+                    opacity: 0;
                 }
 
-                & h2{
+                & h2 {
                     transition-delay: 0.5s;
                 }
 
@@ -239,7 +247,25 @@ section {
             transform: translateX(0);
             transition: 0.5s;
             opacity: 1;
-        }
-    }
 
-};
+            & .car-img {
+
+                & img {
+                    transform: rotate(-20deg);
+                }
+            }
+
+            & .content {
+
+                & .car-information,
+                h2,
+                .description,
+                .information {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+}
